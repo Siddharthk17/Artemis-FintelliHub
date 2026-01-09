@@ -1,0 +1,65 @@
+#ad-detector,
+#ads-detector,
+.pub_728x90,
+.text-ad-links,
+.film-tab > div.playerimiz {
+    display: block !important;
+    visibility: visible !important;
+    /* Move bait elements off-screen instead of hiding to fool scripts */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+
+/* Standard IAB Ad Unit Classes & IDs */
+.ad-banner, .ad-container, .ad-slot, .ad-wrapper,
+.banner-ad, .sidebar-ad, .header-ad, .footer-ad,
+.ad-leaderboard, .ad-skyscraper, .ad-rectangle,
+div[id^="google_ads_"],
+div[id^="div-gpt-ad"],
+div[class^="ad-box"],
+div[class*=" ad-"],
+aside[class*=" ad-"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Generic Sticky/Floating Ads */
+.sticky-ad, .floating-ad, .bottom-sticky-ad,
+div[style*="position: fixed"][style*="bottom: 0"][style*="z-index"],
+div[class*="overlay-ad"],
+div[class*="popup-ad"] {
+    display: none !important;
+}
+
+/* Video Ad Overlays */
+.video-ad-overlay,
+.player-ad-overlay,
+.jw-ad-container,
+.video-advertisement {
+    display: none !important;
+}
+
+iframe[src*="doubleclick.net"],
+iframe[src*="googlesyndication.com"],
+iframe[src*="amazon-adsystem.com"],
+iframe[src*="adnxs.com"],
+iframe[src*="criteo.com"],
+iframe[src*="moatads.com"],
+iframe[src*="outbrain.com"],
+iframe[src*="taboola.com"] {
+    display: none !important;
+}
+
+div[class*="ad-"]:empty,
+div[id*="ad-"]:empty,
+.ad-placeholder:empty {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
